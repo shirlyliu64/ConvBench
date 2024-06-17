@@ -3,6 +3,16 @@ Multi-turn visual conversation is an important ability of real-world AI assistan
 
 ![image](https://github.com/shirlyliu64/ConvBench/blob/main/assets/convbench_detail.png)
 
+# Main Findings
+Based on our benchmark, we conducted a series of experiments. The main findings are summarized as follows:
+
+* The most advanced LVLMs (e.g. GPT4V) still struggle to solve the cahllenge provided by ConvBench
+* The novel hierarchical ablation evaluations of ConvBench conclude that the weakness of ``OCR'', ``Fine-grained'', and ``Spatial'' perception of current LVLMs may inhibit the performance of the next reasoning and creation tasks.
+* The weakness of LVLMs' reasoning capability demanding ``Professional Knowledge'', ``Emotional Intelligence'', ``Imagination'', and ``Sense of Space'' may hinder the performance of the next creation.
+* The performances across different tasks of different LVLMs show a similar distribution, which suggests the development of current LVLMs is synchronous.
+* Performance improves as the language model size of LVLM increases.
+* A declined performance between the first turn and subsequent turns shows that LVLMs tend to generate comprehension biases as the multi-turn conversation progresses or forget the information of previous turns.
+* The high-quality dialogue history provides important guidance to the LVLMs' responses and plays an important role in in-context learning examples.
 
 # Experimental Results
 ![image](https://github.com/shirlyliu64/ConvBench/blob/main/assets/leaderboard.png)
