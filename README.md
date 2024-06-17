@@ -10,7 +10,10 @@ This repository is the official implementation of [ConvBench](https://arxiv.org/
 > Shuo Liu, Kaining Ying, Hao Zhang, Yue Yang, Yuqi Lin, Tianle Zhang, Chuanhao Li, Yu Qiao, Ping Luo, Wenqi Shao<sup>\#</sup>, Kaipeng Zhang<sup>\#</sup>  
 > <sup>\#</sup> WS (shaowenqi@pjlab.org.cn) and KZ (zhangkaipeng@pjlab.org.cn) are correponding authors. 
 
-
+## News🚀🚀🚀
+- `2024/06/13`: 🚀We release ConvBench, the first benchmark designed to systematically evaluate the capability of existing LVLMs about multi-turn visual conversation and provide a novel hirarchical ablation evaluation.
+**Experimental results show that performance of existing LVLMs are limited.**
+  
 # Introduction
 Multi-turn visual conversation is an important ability of real-world AI assistants. However,  the related evaluation benchmark is missed. This paper presents ConvBench, a multi-turn conversation benchmark with hierarchical capabilities ablation evaluation for Large Vision-Language Models (LVLMs). ConvBench comprises 577 curated multi-turn conversations, encompassing 215 tasks. These tasks are broad and open-ended, which resemble real-world user behaviors. ConvBench progressively examines the LVLMs' perception, reasoning, and creativity capabilities in each conversation and can decouple these capabilities in evaluations and thus perform reliable error attribution. Besides, considering the diversity of open-ended questions, we introduce an efficient and reliable automatic evaluation framework. Experimental results reveal that ConvBench is a significant challenge for current LVLMs, even for GPT4v, which achieves only a 39.51 score. Besides, we have some insightful findings, such as the weak perception of LVLMs inhibits authentic strengths in reasoning and creation. We believe our design of hierarchical capabilities, decoupling capabilities evaluation, and multi-turn conversation can blaze a new trail in LVLMs evaluation.
 
@@ -19,7 +22,7 @@ Multi-turn visual conversation is an important ability of real-world AI assistan
 # Main Findings
 Based on our benchmark, we conducted a series of experiments. The main findings are summarized as follows:
 
-* The most advanced LVLMs (e.g. GPT4V) still struggle to solve the cahllenge provided by ConvBench
+* The most advanced LVLMs (e.g. GPT4V) still struggle to solve the cahllenge provided by ConvBench.
 * The novel hierarchical ablation evaluations of ConvBench conclude that the weakness of ``OCR'', ``Fine-grained'', and ``Spatial'' perception of current LVLMs may inhibit the performance of the next reasoning and creation tasks.
 * The weakness of LVLMs' reasoning capability demanding ``Professional Knowledge'', ``Emotional Intelligence'', ``Imagination'', and ``Sense of Space'' may hinder the performance of the next creation.
 * The performances across different tasks of different LVLMs show a similar distribution, which suggests the development of current LVLMs is synchronous.
