@@ -5,9 +5,13 @@ Multi-turn visual conversation is an important ability of real-world AI assistan
 
 
 # Experimental Results
+![image](https://github.com/shirlyliu64/ConvBench/blob/main/assets/leaderboard.png)
+
 The performances across different tasks of different LVLMs show a similar distribution, which suggests the development of current LVLMs is synchronous.
 
 ![image](https://github.com/shirlyliu64/ConvBench/blob/main/assets/task_evalutation.png)
+
+
 
 # Acknowledgement
 ConvBench is build upon the documents from [VisIT-Bench](https://github.com/mlfoundations/VisIT-Bench/tree/main) which is a robust benchmark for diverse real-life vision-language instructions. [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) provides useful out-of-box tools and implements many adavanced LVLMs. Thanks for their selfless dedication.
