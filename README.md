@@ -5,6 +5,8 @@ Multi-turn visual conversation is an important ability of real-world AI assistan
 
 
 # Experimental Results
+The performances across different tasks of different LVLMs show a similar distribution, which suggests the development of current LVLMs is synchronous.
+
 ![image](https://github.com/shirlyliu64/ConvBench/blob/main/assets/task_evalutation.png)
 
 # Acknowledgement
