@@ -1,6 +1,6 @@
 # ConvBench
 <p align="left">
-  <a href="https://arxiv.org/abs/2403.20194"><b>ArXiv Paper</b></a> 
+  <a href="https://arxiv.org/abs/2403.20194"><b>ArXiv Paper</b></a> | 
   <a href="https://shirlyliu64.github.io/ConvBench/"><b>Project</b></a> 
 </p>
 
