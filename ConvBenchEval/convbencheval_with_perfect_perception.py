@@ -356,3 +356,62 @@ for i in range(len(df)):
         
 
     
+second_turn_rating = 0
+third_turn_rating = 0
+overall_prediction = 0
+TEST_SUM = 577    
+i = 0
+for id in range(1,579): 
+    position = pairwise[id-1]
+    result_path = os.path.join(save_path, '{}.yaml'.format(str(id)))
+
+    if os.path.exists(result_path) == False:
+        second = 0
+        third = 0
+        overall = 0  
+    else:
+        i+=1
+        with open(result_path, "r") as file:
+            data_i = yaml.safe_load(file)
+        second = data_i['second_turn_rating']
+        third = data_i['third_turn_rating']
+        overall = data_i['overall_prediction']
+
+
+        if second not in ['A','B']:
+            second = extract_rate(data_i['second_turn_evaluation'])
+        if third not in ['A','B']:
+            third = extract_rate(data_i['third_turn_evaluation'])
+        if overall not in ['A','B']:
+            overall = extract_rate(data_i['overall_evalaution'])
+
+        pairwise_dict = dict()
+        if position == 0:
+            #pairwise_dict["A"] = "model_answer"
+            #pairwise_dict["B"] = "human_answer"
+            if second == "A":
+                second_turn_rating +=1
+            if third == "A":
+                third_turn_rating +=1
+            if overall == "A":
+                overall_prediction +=1
+
+
+        if position == 1:
+            #pairwise_dict["A"] = "human_answer"
+            #pairwise_dict["B"] = "model_answer"   
+            if second == "B":
+                second_turn_rating +=1
+            if third == "B":
+                third_turn_rating +=1
+            if overall == "B":
+                overall_prediction +=1
+
+
+second_turn_rating = second_turn_rating/TEST_SUM
+third_turn_rating = third_turn_rating/TEST_SUM
+overall_prediction = overall_prediction/TEST_SUM
+
+print("second_turn_rating", second_turn_rating)
+print("third_turn_rating", third_turn_rating)
+print("overall_prediction", overall_prediction)
